@@ -49,8 +49,8 @@ clone 25.12 ${yaof_repo} ${otherdir}/yaof &
 wait && sync
 
 p "一些调整"
-# p "修改 IP ( 192.168.1.99 )"
-# sed -i 's/192.168.1.1/192.168.1.99/g' ${wrtdir}/package/base-files/files/bin/config_generate
+p "修改 IP ( 192.168.1.7 )"
+# sed -i 's/192.168.1.1/192.168.1.7/g' ${wrtdir}/package/base-files/files/bin/config_generate
 p "编译优化"
 sed -i 's/Os/O2/g' ${wrtdir}/include/target.mk
 sed -i 's/-mcpu=cortex-a53/&+crypto+crc -fpredictive-commoning -ftree-partial-pre -floop-interchange -fschedule-insns -fsched-pressure -ftree-vectorize -fvect-cost-model=cheap -mno-outline-atomics -fweb -frename-registers -fno-plt/' ${wrtdir}/include/target.mk
